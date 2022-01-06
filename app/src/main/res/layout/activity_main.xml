@@ -1,0 +1,464 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="409dp"
+        android:layout_height="160dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="1dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/dtr_switch"
+            android:layout_width="50dp"
+            android:layout_height="55dp"
+            android:layout_marginStart="20dp"
+            android:height="22dp"
+            android:fontFamily="@font/fira_sans"
+            android:text="→"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            app:layout_constraintStart_toEndOf="@+id/dtr_input"
+            app:layout_constraintTop_toBottomOf="@+id/ten_view" />
+
+        <Button
+            android:id="@+id/dtr_switch9"
+            android:layout_width="50dp"
+            android:layout_height="55dp"
+            android:layout_marginStart="5dp"
+            android:height="22dp"
+            android:fontFamily="@font/fira_sans"
+            android:text="9"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            app:layout_constraintStart_toEndOf="@+id/dtr_switch"
+            app:layout_constraintTop_toBottomOf="@+id/ten_view" />
+
+        <EditText
+            android:id="@+id/dtr_input"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:fontFamily="@font/fira_sans"
+            android:hint="DTR"
+            android:inputType="numberSigned|number|numberDecimal"
+            android:singleLine="true"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/dtr_text"
+            app:layout_wrapBehaviorInParent="skipped"
+            tools:text="9" />
+
+        <TextView
+            android:id="@+id/dtr_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="60dp"
+            android:fontFamily="@font/fira_sans"
+            android:text="Tuen raionlí (DTR+)"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/dtr_input" />
+
+        <TextView
+            android:id="@+id/xt_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="80dp"
+            android:fontFamily="@font/overpass_mono"
+            android:text="TextView"
+            android:textSize="40dp"
+            app:layout_constraintBottom_toTopOf="@+id/dtr_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/ten_view"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text=".24 1051" />
+
+        <TextView
+            android:id="@+id/ten_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="75dp"
+            android:fontFamily="@font/overpass_mono_semibold"
+            android:text="TextView"
+            android:textSize="60dp"
+            app:layout_constraintBottom_toTopOf="@+id/dtr_text"
+            app:layout_constraintEnd_toStartOf="@+id/xt_view"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="9123" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout2"
+        android:layout_width="411dp"
+        android:layout_height="265dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="1dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout">
+
+        <TextClock
+            android:id="@+id/datenow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:fontFamily="@font/fira_sans"
+            android:format12Hour="yyyy.MM.dd HH:mm:ss"
+            android:format24Hour="yyyy.MM.dd HH:mm:ss"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="2021.11.11 13:23:43" />
+
+        <Button
+            android:id="@+id/open_cal"
+            android:layout_width="100dp"
+            android:layout_height="44dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/fira_sans"
+            android:text="Téncar"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/datenow" />
+
+        <Button
+            android:id="@+id/now_open"
+            android:layout_width="100dp"
+            android:layout_height="44dp"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="#742895"
+            android:fontFamily="@font/fira_sans"
+            android:text="šen"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toStartOf="@+id/open_time"
+            app:layout_constraintStart_toEndOf="@+id/open_cal"
+            app:layout_constraintTop_toBottomOf="@+id/datenow" />
+
+        <Button
+            android:id="@+id/open_time"
+            android:layout_width="100dp"
+            android:layout_height="44dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="30dp"
+            android:fontFamily="@font/fira_sans"
+            android:text="Ghal"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/datenow" />
+
+        <EditText
+            android:id="@+id/year_input"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/fira_sans"
+            android:hint="il"
+            android:inputType="numberSigned|number"
+            android:maxLength="4"
+            android:singleLine="true"
+            android:textAlignment="center"
+            android:textSize="30sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/open_cal"
+            app:layout_wrapBehaviorInParent="skipped"
+            tools:text="2021" />
+
+        <EditText
+            android:id="@+id/month_input"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/fira_sans"
+            android:hint="sar"
+            android:inputType="number"
+            android:maxLength="2"
+            android:singleLine="true"
+            android:textAlignment="center"
+            android:textSize="30sp"
+            app:layout_constraintStart_toEndOf="@+id/year_input"
+            app:layout_constraintTop_toBottomOf="@+id/open_cal"
+            tools:text="05" />
+
+        <EditText
+            android:id="@+id/date_input"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/fira_sans"
+            android:hint="tén"
+            android:inputType="number"
+            android:maxLength="2"
+            android:singleLine="true"
+            android:textAlignment="center"
+            android:textSize="30sp"
+            app:layout_constraintStart_toEndOf="@+id/month_input"
+            app:layout_constraintTop_toBottomOf="@+id/open_cal"
+            tools:text="16" />
+
+        <EditText
+            android:id="@+id/hour_input"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/fira_sans"
+            android:hint="dónm"
+            android:inputType="number"
+            android:maxLength="2"
+            android:singleLine="true"
+            android:textAlignment="center"
+            android:textSize="30sp"
+            app:layout_constraintStart_toEndOf="@+id/date_input"
+            app:layout_constraintTop_toBottomOf="@+id/open_cal"
+            tools:text="16" />
+
+        <EditText
+            android:id="@+id/minute_input"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/fira_sans"
+            android:hint="nóc"
+            android:inputType="number"
+            android:maxLength="2"
+            android:singleLine="true"
+            android:textAlignment="center"
+            android:textSize="30sp"
+            app:layout_constraintStart_toEndOf="@+id/hour_input"
+            app:layout_constraintTop_toBottomOf="@+id/open_cal"
+            tools:text="16" />
+
+        <Button
+            android:id="@+id/submit_input"
+            android:layout_width="50dp"
+            android:layout_height="55dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:height="22dp"
+            android:fontFamily="@font/fira_sans"
+            android:text="→"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/open_cal" />
+
+        <Button
+            android:id="@+id/clear_input"
+            android:layout_width="50dp"
+            android:layout_height="55dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:fontFamily="@font/fira_sans"
+            android:text="×"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/minute_input" />
+
+        <TextView
+            android:id="@+id/textView12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/fira_sans"
+            android:text="→"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/year_input" />
+
+        <TextView
+            android:id="@+id/ten_disp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/fira_sans"
+            android:letterSpacing="0.3"
+            android:textSize="36dp"
+            app:layout_constraintStart_toEndOf="@+id/textView12"
+            app:layout_constraintTop_toBottomOf="@+id/month_input"
+            tools:text="9324" />
+
+        <TextView
+            android:id="@+id/xt_disp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/fira_sans_light"
+            android:letterSpacing="0.2"
+            android:textSize="28sp"
+            app:layout_constraintStart_toEndOf="@+id/ten_disp"
+            app:layout_constraintTop_toBottomOf="@+id/month_input"
+            tools:text=".01 8473" />
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="409dp"
+            android:layout_height="1dp"
+            android:layout_marginStart="1dp"
+            android:layout_marginEnd="1dp"
+            android:background="?android:attr/listDivider"
+            app:layout_constraintBottom_toTopOf="@+id/datenow"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/divider2"
+            android:layout_width="409dp"
+            android:layout_height="1dp"
+            android:layout_marginStart="1dp"
+            android:layout_marginEnd="1dp"
+            android:background="?android:attr/listDivider"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ten_disp" />
+
+        <TextView
+            android:id="@+id/tzne"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="40dp"
+            android:fontFamily="@font/fira_sans_light"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="GMT+11:08" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout3"
+        android:layout_width="409dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="1dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout2">
+
+        <Button
+            android:id="@+id/ten_to_time_button"
+            android:layout_width="50dp"
+            android:layout_height="55dp"
+            android:layout_marginTop="6dp"
+            android:height="22dp"
+            android:fontFamily="@font/fira_sans"
+            android:text="→"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            app:layout_constraintStart_toEndOf="@+id/xtn_input"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/date_result"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/fira_sans"
+            android:textAlignment="center"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/ten_to_time_button"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="2022.01.16\n12:34:27" />
+
+        <EditText
+            android:id="@+id/ten_input"
+            android:layout_width="95dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:ems="10"
+            android:fontFamily="@font/fira_sans"
+            android:hint="tén"
+            android:inputType="numberSigned|number"
+            android:textAlignment="textEnd"
+            android:textSize="30sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="9342" />
+
+        <EditText
+            android:id="@+id/xtn_input"
+            android:layout_width="72dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:ems="10"
+            android:fontFamily="@font/fira_sans_light"
+            android:hint="xřetén"
+            android:inputType="number"
+            android:letterSpacing="-0.05"
+            android:maxLength="6"
+            android:textSize="22sp"
+            app:layout_constraintStart_toEndOf="@+id/ten_input"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="888814" />
+
+        <View
+            android:id="@+id/divider3"
+            android:layout_width="407dp"
+            android:layout_height="1dp"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="1dp"
+            android:background="?android:attr/listDivider"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ten_input" />
+
+        <TextView
+            android:id="@+id/debugline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/fira_sans"
+            android:text="tébuzja sénd sejat."
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/divider3" />
+
+        <TextView
+            android:id="@+id/information"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/fira_sans_light"
+            android:text="Pervelo tén: 1 | Áml Dornjoi Tuen Raion = DTR+9\n Dónm = 41666̄ xt | Nóc = 694̄ xt | Dáq = 11.5741 xt\n↓ 1 000 000 → 1 xt ↓\n24.00.00/2.24.00/14.24/1.26:4/8:64/:864/:0864"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/debugline" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/notes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/overpass_mono"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout3" />
+</androidx.constraintlayout.widget.ConstraintLayout>
